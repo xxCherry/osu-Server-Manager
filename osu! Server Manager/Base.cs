@@ -84,6 +84,7 @@ namespace osu__Server_Manager
             {
                 new MenuBarItem ("Servers", serverItems.ToArray())
                 {
+                    // No clue why it doesn't work
                     Action = () =>
                     {
                         var menuItemsLength = Config.Servers.Count;
@@ -185,7 +186,7 @@ namespace osu__Server_Manager
         {
             using var registry = Registry.ClassesRoot.OpenSubKey("osu\\DefaultIcon");
 
-            if (registry != null)
+            if (registry is not null)
             {
                 var osuPath = registry.GetValue(null).ToString();
 
