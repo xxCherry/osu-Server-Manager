@@ -73,7 +73,8 @@ namespace osu__Server_Manager
 
             _config["Servers"] = GetValue<string>("Servers");
 
-            Servers = JsonConvert.DeserializeObject<List<ServerInfo>>((string)_config["Servers"]);
+            if (!string.IsNullOrEmpty((string)_config["Servers"]))
+                Servers = JsonConvert.DeserializeObject<List<ServerInfo>>((string)_config["Servers"]);
         }
 
         public static void SaveConfig()

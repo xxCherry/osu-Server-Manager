@@ -10,7 +10,6 @@ using Terminal.Gui;
 
 namespace osu__Server_Manager
 {
-    [SupportedOSPlatform("windows")]
     public class Base
     {
         private static string _osuPath;
@@ -63,7 +62,7 @@ namespace osu__Server_Manager
             {
                 Config.Servers.Add(new ServerInfo("Astellia", "astellia.club"));
                 Config.Servers.Add(new ServerInfo("Kurikku", "kurikku.pw"));
-                Config.Servers.Add(new ServerInfo("Gatari", "osu.gatari.pw"));
+                Config.Servers.Add(new ServerInfo("Gatari", "gatari.pw"));
                 Config.Servers.Add(new ServerInfo("Ainu", "ainu.pw"));
                 Config.Servers.Add(new ServerInfo("Ripple", "ripple.moe"));
 
